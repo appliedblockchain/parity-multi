@@ -1,0 +1,156 @@
+{
+  "engine": {
+    "authorityRound": {
+      "params": {
+        "gasLimitBoundDivisor": "0x400",
+        "stepDuration": "1",
+        "validators": {
+          "list": [
+            "0x7448B6Bd4B1Ba1aAa835a03C3C0cF435a502081a",
+            "0xF990D24AD46a7c46c235A0605f46B8378A3DD45E",
+            "0x2903F69FB4fF0761E24C717FEdCE384ddFf7e90f",
+            "0xc3eE5ba1d4BF6C6Da8FDeEa0463ad8452B1F5672",
+            "0x0370D68385eB2d6cd7b84de2bc5964C9304B662C",
+            "0xdcB2386565a4a83D0E86bD7F0CFFDd95085548d2"
+          ]
+        }
+      }
+    }
+  },
+  "genesis": {
+    "seal": {
+      "authorityRound": {
+        "step": "0x0",
+        "signature": "0x0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+      }
+    },
+    "difficulty": "0x20000",
+    "gasLimit": "0xffffffffff"
+  },
+  "params": {
+    "maximumExtraDataSize": "0x20",
+    "minGasLimit": "0x2faf080",
+    "networkID": "0x04",
+    "gasLimitBoundDivisor": "0x400",
+    "eip140Transition": 0,
+    "eip211Transition": 0,
+    "eip214Transition": 0,
+    "eip658Transition": 0
+  },
+  "accounts": {
+    "0x0000000000000000000000000000000000000001": {
+      "balance": "1",
+      "builtin": {
+        "name": "ecrecover",
+        "pricing": {
+          "linear": {
+            "base": 3000,
+            "word": 0
+          }
+        }
+      }
+    },
+    "0x0000000000000000000000000000000000000002": {
+      "balance": "1",
+      "builtin": {
+        "name": "sha256",
+        "pricing": {
+          "linear": {
+            "base": 60,
+            "word": 12
+          }
+        }
+      }
+    },
+    "0x0000000000000000000000000000000000000003": {
+      "balance": "1",
+      "builtin": {
+        "name": "ripemd160",
+        "pricing": {
+          "linear": {
+            "base": 600,
+            "word": 120
+          }
+        }
+      }
+    },
+    "0x0000000000000000000000000000000000000004": {
+      "balance": "1",
+      "builtin": {
+        "name": "identity",
+        "pricing": {
+          "linear": {
+            "base": 15,
+            "word": 3
+          }
+        }
+      }
+    },
+    "0000000000000000000000000000000000000005": {
+      "builtin": {
+        "name": "modexp",
+        "activate_at": "0x0",
+        "pricing": {
+          "modexp": {
+            "divisor": 20
+          }
+        }
+      }
+    },
+    "0000000000000000000000000000000000000006": {
+      "builtin": {
+        "name": "alt_bn128_add",
+        "activate_at": "0x0",
+        "pricing": {
+          "linear": {
+            "base": 500,
+            "word": 0
+          }
+        }
+      }
+    },
+    "0000000000000000000000000000000000000007": {
+      "builtin": {
+        "name": "alt_bn128_mul",
+        "activate_at": "0x0",
+        "pricing": {
+          "linear": {
+            "base": 40000,
+            "word": 0
+          }
+        }
+      }
+    },
+    "0000000000000000000000000000000000000008": {
+      "builtin": {
+        "name": "alt_bn128_pairing",
+        "activate_at": "0x0",
+        "pricing": {
+          "alt_bn128_pairing": {
+            "base": 100000,
+            "pair": 80000
+          }
+        }
+      }
+    },
+    "0x7448B6Bd4B1Ba1aAa835a03C3C0cF435a502081a": {
+      "balance": "1000000000000000000000000000000000000000000000000000000000000"
+    },
+    "0xF990D24AD46a7c46c235A0605f46B8378A3DD45E": {
+      "balance": "1000000000000000000000000000000000000000000000000000000000000"
+    },
+    "0x2903F69FB4fF0761E24C717FEdCE384ddFf7e90f": {
+      "balance": "1000000000000000000000000000000000000000000000000000000000000"
+    },
+    "0xc3eE5ba1d4BF6C6Da8FDeEa0463ad8452B1F5672": {
+      "balance": "1000000000000000000000000000000000000000000000000000000000000"
+    },
+    "0x0370D68385eB2d6cd7b84de2bc5964C9304B662C": {
+      "balance": "1000000000000000000000000000000000000000000000000000000000000"
+    },
+    "0xdcB2386565a4a83D0E86bD7F0CFFDd95085548d2": {
+      "balance": "1000000000000000000000000000000000000000000000000000000000000"
+    }
+  },
+  "name": "multi"
+}

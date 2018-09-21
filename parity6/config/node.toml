@@ -1,0 +1,29 @@
+[parity]
+chain = "/parity/config/chain.json"
+base_path = "/parity6/"
+db_path = "/parity/data"
+keys_path = "/parity6/keys"
+
+[network]
+reserved_peers = "/parity/config/peers.txt"
+reserved_only = true
+
+[account]
+password = ["/parity6/config/pw.txt"]
+unlock = ["0xdcB2386565a4a83D0E86bD7F0CFFDd95085548d2"]
+
+[rpc]
+interface = "0.0.0.0"
+cors = ["all"]
+hosts = ["all"]
+apis = ["web3", "eth", "net", "parity", "traces", "rpc", "personal", "parity_accounts", "signer", "parity_set"]
+
+[websockets]
+interface = "0.0.0.0"
+hosts = ["all"]
+origins = ["all"]
+
+[mining]
+reseal_max_period = 3600000
+gas_floor_target = "5000000000"
+engine_signer = "0xdcB2386565a4a83D0E86bD7F0CFFDd95085548d2"

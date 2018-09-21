@@ -1,0 +1,58 @@
+version: '3'
+
+services:
+  parity1:
+    image: appliedblockchain/parity-multi:latest
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: always
+    command:
+      --config /parity1/config/node.toml
+    volumes:
+      - parity1:/parity/data
+    ports:
+      - 8545:8545
+      - 8546:8546
+  parity2 :
+    image: appliedblockchain/parity-multi:latest
+    restart: always
+    command:
+      --config /parity2/config/node.toml
+    volumes:
+      - parity2:/parity/data
+  parity3:
+    image: appliedblockchain/parity-multi:latest
+    restart: always
+    command:
+      --config /parity3/config/node.toml
+    volumes:
+      - parity3:/parity/data
+  parity4:
+    image: appliedblockchain/parity-multi:latest
+    restart: always
+    command:
+      --config /parity4/config/node.toml
+    volumes:
+      - parity4:/parity/data
+  parity5:
+    image: appliedblockchain/parity-multi:latest
+    restart: always
+    command:
+      --config /parity5/config/node.toml
+    volumes:
+      - parity5:/parity/data
+  parity6:
+    image: appliedblockchain/parity-multi:latest
+    restart: always
+    command:
+      --config /parity6/config/node.toml
+    volumes:
+      - parity6:/parity/data
+volumes:
+  parity1:
+  parity2:
+  parity3:
+  parity4:
+  parity5:
+  parity6:
