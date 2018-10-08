@@ -24,6 +24,6 @@ hosts = ["all"]
 origins = ["all"]
 
 [mining]
+reseal_max_period = 1000
 engine_signer = "0xF990D24AD46a7c46c235A0605f46B8378A3DD45E"
-reseal_max_period = 3600000
 gas_floor_target = "5000000000"
